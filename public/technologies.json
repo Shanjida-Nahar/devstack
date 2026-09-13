@@ -148,8 +148,7 @@
     "category": "Cloud",
     "categoryColor": "#FF9900",
     "description": "A cloud computing platform providing infrastructure and application services.",
-    "icon": "https://cdn.simpleicons.org/amazonaws/FF9900",
-    "rating": 4.7,
+    "icon": "icon": "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
     "difficulty": "Advanced",
     "badge": "Popular"
   },
