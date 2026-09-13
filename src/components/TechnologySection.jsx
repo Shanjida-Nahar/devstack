@@ -3,51 +3,50 @@ import TechnologyCard from "./TechnologyCard";
 
 const TechnologySection = ({
   technologies,
-  addToStack,
-  stack
+  stack,
+  addToStack
 }) => {
 
 
-  return (
-    <section id="technologies">
+return (
 
-      <h2>
-        Explore Technologies
-      </h2>
+<div>
 
-
-      <div className="technology-layout">
+<h2 className="section-title">
+Explore Technologies
+</h2>
 
 
-        <div className="technology-grid">
-
-          {
-            technologies.map((technology) => (
-
-              <TechnologyCard
-
-                key={technology.id}
-
-                technology={technology}
-
-                addToStack={addToStack}
-
-                stack={stack}
-
-              />
-
-            ))
-          }
+<div className="technology-grid">
 
 
-        </div>
+{
+technologies.map(technology=>(
+
+<TechnologyCard
+
+key={technology.id}
+
+technology={technology}
+
+stack={stack}
+
+addToStack={addToStack}
+
+/>
+
+))
+}
 
 
-      </div>
+</div>
 
 
-    </section>
-  );
+</div>
+
+);
+
+
 };
 
 

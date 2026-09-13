@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import TechnologySection from "./components/TechnologySection";
-import StackSidebar from "./components/StackSidebar";
+import TechnologyArea from "./components/TechnologyArea";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
 
   const [technologies, setTechnologies] = useState([]);
 
-  const [loading, setLoading] = useState(true);
-
   const [stack, setStack] = useState([]);
+
+  const [loading, setLoading] = useState(true);
 
 
 
@@ -32,12 +33,13 @@ function App() {
 
       });
 
+
   }, []);
 
 
 
 
-  const addToStack = (technology) => {
+  const addToStack = (technology)=>{
 
 
     const exists = stack.find(
@@ -48,12 +50,13 @@ function App() {
     if(exists){
 
       toast.warning(
-        `${technology.name} is already added`
+        `${technology.name} already added`
       );
 
       return;
 
     }
+
 
 
     setStack([
@@ -63,8 +66,9 @@ function App() {
 
 
     toast.success(
-      `${technology.name} added to stack`
+      `${technology.name} added`
     );
+
 
   };
 
@@ -75,13 +79,13 @@ function App() {
 
 
     const removed = stack.find(
-      item => item.id === id
+      item=>item.id===id
     );
 
 
     setStack(
       stack.filter(
-        item => item.id !== id
+        item=>item.id!==id
       )
     );
 
@@ -98,16 +102,15 @@ function App() {
 
   const removeAll = ()=>{
 
-
     setStack([]);
 
-
     toast.info(
-      "All technologies removed"
+      "Stack cleared"
     );
 
-
   };
+
+
 
 
 
@@ -121,39 +124,33 @@ function App() {
 
 
       {
-        loading ? (
+        loading ?
 
-          <h2 className="loading">
-            Loading technologies...
-          </h2>
+        <h2 className="loading">
+          Loading technologies...
+        </h2>
 
-        ) : (
+        :
 
-          <TechnologySection
+        <TechnologyArea
 
-            technologies={technologies}
+          technologies={technologies}
 
-            stack={stack}
+          stack={stack}
 
-            addToStack={addToStack}
+          addToStack={addToStack}
 
-          />
+          removeFromStack={removeFromStack}
 
-        )
+          removeAll={removeAll}
+
+        />
+
       }
 
 
 
-      <StackSidebar
-
-        stack={stack}
-
-        removeFromStack={removeFromStack}
-
-        removeAll={removeAll}
-
-      />
-
+      <Footer />
 
 
       <ToastContainer />

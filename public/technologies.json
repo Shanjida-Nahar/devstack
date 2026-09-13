@@ -4,7 +4,7 @@
     "name": "React",
     "category": "Frontend",
     "description": "A JavaScript library for building fast and interactive user interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -14,7 +14,7 @@
     "name": "JavaScript",
     "category": "Language",
     "description": "A programming language used to create dynamic web applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
@@ -24,7 +24,7 @@
     "name": "Node.js",
     "category": "Backend",
     "description": "A runtime environment for building scalable server-side applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/NodeJS.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Backend"
@@ -34,7 +34,7 @@
     "name": "MongoDB",
     "category": "Database",
     "description": "A NoSQL database designed for modern application development.",
-    "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Database"
@@ -44,7 +44,7 @@
     "name": "Python",
     "category": "Language",
     "description": "A versatile programming language used in web, AI, and automation.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -54,7 +54,7 @@
     "name": "TypeScript",
     "category": "Language",
     "description": "A strongly typed programming language built on JavaScript.",
-    "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Modern"
@@ -64,7 +64,7 @@
     "name": "Tailwind CSS",
     "category": "Styling",
     "description": "A utility-first CSS framework for quickly building interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
     "badge": "Styling"
@@ -74,7 +74,7 @@
     "name": "PostgreSQL",
     "category": "Database",
     "description": "An advanced open-source relational database system.",
-    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "SQL"
@@ -84,7 +84,7 @@
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform for developing and deploying applications using containers.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     "rating": 4.8,
     "difficulty": "Advanced",
     "badge": "Containers"
@@ -94,7 +94,7 @@
     "name": "Git",
     "category": "Tools",
     "description": "A version control system used for tracking code changes.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"

@@ -1,72 +1,86 @@
 const TechnologyCard = ({
   technology,
-  addToStack,
-  stack
+  stack,
+  addToStack
 }) => {
 
-  const isAdded = stack.some(
-    (item) => item.id === technology.id
-  );
+
+const isAdded = stack.some(
+(item)=>item.id===technology.id
+);
 
 
-  return (
-    <div className="tech-card">
 
-      <img
-        src={technology.icon}
-        alt={technology.name}
-      />
+return (
+
+<div className="tech-card">
 
 
-      <span className="badge">
-        {technology.badge}
-      </span>
+<img
+src={technology.icon}
+alt={technology.name}
+/>
 
 
-      <h3>
-        {technology.name}
-      </h3>
+<span className="badge">
+{technology.badge}
+</span>
 
 
-      <p>
-        {technology.description}
-      </p>
+<h3>
+{technology.name}
+</h3>
 
 
-      <div className="info">
-
-        <span>
-          {technology.category}
-        </span>
-
-        <span>
-          {technology.difficulty}
-        </span>
-
-      </div>
+<p>
+{technology.description}
+</p>
 
 
-      <div className="rating">
-        ⭐ {technology.rating}
-      </div>
+<div className="info">
+
+<span>
+{technology.category}
+</span>
 
 
-      <button
-        disabled={isAdded}
-        onClick={() => addToStack(technology)}
-      >
+<span>
+{technology.difficulty}
+</span>
 
-        {
-          isAdded
-          ? "✓ Added to Stack"
-          : "Add to Stack"
-        }
-
-      </button>
+</div>
 
 
-    </div>
-  );
+
+<div className="rating">
+⭐ {technology.rating}
+</div>
+
+
+
+<button
+
+disabled={isAdded}
+
+onClick={()=>addToStack(technology)}
+
+>
+
+{
+isAdded
+?
+"✓ Added to Stack"
+:
+"Add to Stack"
+}
+
+</button>
+
+
+</div>
+
+);
+
 };
 
 

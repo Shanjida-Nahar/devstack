@@ -1,174 +1,370 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .navbar {
+
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 20;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 20px 8%;
+
   background: white;
+
 }
+
+
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 22px;
-  font-weight: 700;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-size:24px;
+  font-weight:700;
+
 }
+
+
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-radius: 10px;
-  background: linear-gradient(90deg, orange, hotpink, violet);
-}
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
+  width:48px;
+  height:48px;
 
-.nav-links a {
-  text-decoration: none;
-  color: #222;
-}
-
-.nav-buttons button {
-  padding: 10px 20px;
-  border-radius: 25px;
-  border: none;
-}
-
-.signup-btn,
-.primary-btn {
-  color: white;
-  background: linear-gradient(90deg, orange, hotpink, violet);
-}
-
-
-.hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 8%;
-}
-
-.hero h1 {
-  font-size: 60px;
-}
-
-.hero h1 span {
-  background: linear-gradient(90deg, orange, hotpink, violet);
-  color: transparent;
-  background-clip: text;
-}
-
-.hero p {
-  max-width: 550px;
-  margin: 25px 0;
-  font-size: 18px;
-}
-
-.hero-buttons button {
-  padding: 14px 25px;
-  border-radius: 30px;
-  margin-right: 15px;
-}
-
-.secondary-btn {
-  background: white;
-  border: 1px solid #ddd;
-}
-
-.code-card {
-  width: 300px;
-  height: 300px;
-  border-radius: 30px;
-  background: #111;
-  color: white;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:80px;
+
+  border-radius:12px;
+
+  color:white;
+
+  background:
+  linear-gradient(90deg,#ff8a00,#ff0080,#7928ca);
+
 }
 
-#technologies {
-  padding: 50px 8%;
-}
 
-#technologies h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
 
-.technology-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-}
+.nav-links {
 
-.tech-card {
-  padding:25px;
-  border-radius:20px;
-  background:white;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.tech-card img {
-  width:60px;
-  height:60px;
-}
-
-.badge {
-  display:inline-block;
-  margin:15px 0;
-}
-
-.info {
-  display:flex;
-  justify-content:space-between;
-  margin:15px 0;
-}
-
-.technology-layout {
   display:flex;
   gap:30px;
+
 }
+
+
+.nav-links a {
+
+  text-decoration:none;
+  color:#111;
+
+}
+
+
+
+.nav-buttons button {
+
+  padding:12px 25px;
+
+  border:none;
+
+  border-radius:30px;
+
+}
+
+
+
+.signup-btn {
+
+  color:white;
+
+  background:
+  linear-gradient(90deg,#ff8a00,#ff0080,#7928ca);
+
+}
+
+
+
+.hero {
+
+  min-height:70vh;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:80px 8%;
+
+}
+
+
+
+.hero h1 {
+
+  font-size:64px;
+
+}
+
+
+
+.hero h1 span {
+
+  background:
+  linear-gradient(90deg,#ff8a00,#ff0080,#7928ca);
+
+  color:transparent;
+
+  background-clip:text;
+
+}
+
+
+
+.hero p {
+
+  max-width:550px;
+
+  font-size:18px;
+
+  margin:25px 0;
+
+}
+
+
+
+.hero-buttons button {
+
+  padding:14px 28px;
+
+  border-radius:30px;
+
+  margin-right:15px;
+
+  cursor:pointer;
+
+}
+
+
+
+.primary-btn {
+
+  border:none;
+
+  color:white;
+
+  background:
+  linear-gradient(90deg,#ff8a00,#ff0080,#7928ca);
+
+}
+
+
+
+.secondary-btn {
+
+  background:white;
+
+  border:1px solid #ddd;
+
+}
+
+
+
+.code-card {
+
+  width:300px;
+
+  height:300px;
+
+  border-radius:35px;
+
+  background:#111;
+
+  color:white;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:80px;
+
+}
+
+
+
+.technology-area {
+
+  display:grid;
+
+  grid-template-columns:minmax(0,1fr) 320px;
+
+  gap:30px;
+
+  padding:50px 8%;
+
+  align-items:start;
+
+}
+
+
+
+.section-title {
+
+  text-align:center;
+
+  margin-bottom:40px;
+
+}
+
+
+
+.technology-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:25px;
+
+}
+
+
+
+.tech-card {
+
+  padding:25px;
+
+  border-radius:20px;
+
+  box-shadow:0 10px 30px #ddd;
+
+  min-height:390px;
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+
+
+.tech-card img {
+
+  width:65px;
+
+  height:65px;
+
+}
+
+
+
+.badge {
+
+  margin:15px 0;
+
+}
+
+
+
+.tech-card p {
+
+  line-height:1.5;
+
+}
+
+
+
+.info {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin:15px 0;
+
+}
+
+
+
+.rating {
+
+  margin-bottom:20px;
+
+}
+
+
+
+.tech-card button {
+
+  margin-top:auto;
+
+  width:max-content;
+
+  padding:12px 25px;
+
+  border:none;
+
+  border-radius:30px;
+
+  color:white;
+
+  background:
+  linear-gradient(90deg,#ff8a00,#ff0080,#7928ca);
+
+}
+
 
 
 .stack-sidebar {
 
-  width:300px;
   padding:25px;
+
   border-radius:20px;
+
   background:#fafafa;
 
+  position:sticky;
+
+  top:100px;
+
 }
+
 
 
 .stack-item {
 
   display:flex;
+
   align-items:center;
-  gap:10px;
-  margin-bottom:15px;
+
+  gap:12px;
+
+  margin:20px 0;
 
 }
+
 
 
 .stack-item img {
 
-  width:40px;
-  height:40px;
+  width:45px;
+
+  height:45px;
 
 }
+
 
 
 .stack-item button {
@@ -177,19 +373,133 @@
 
 }
 
-.loading {
-  text-align:center;
-  margin:50px;
-}
 
 
 .remove-all-btn {
 
-  margin-top:20px;
   width:100%;
-  padding:10px;
+
+  padding:12px;
+
   border:none;
-  border-radius:20px;
-  cursor:pointer;
+
+  border-radius:25px;
+
+}
+
+
+
+.loading {
+
+  text-align:center;
+
+}
+
+
+
+.footer {
+
+  margin-top:50px;
+
+  padding:50px 8%;
+
+  background:#111;
+
+  color:white;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+}
+
+
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+  .technology-grid {
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.nav-links {
+
+  display:none;
+
+}
+
+
+.navbar {
+
+ padding:15px 5%;
+
+}
+
+
+
+.hero {
+
+ flex-direction:column;
+
+ text-align:center;
+
+ gap:40px;
+
+}
+
+
+
+.hero h1 {
+
+ font-size:40px;
+
+}
+
+
+
+.technology-area {
+
+ grid-template-columns:1fr;
+
+}
+
+
+
+.technology-grid {
+
+ grid-template-columns:1fr;
+
+}
+
+
+
+.stack-sidebar {
+
+ position:relative;
+
+ top:0;
+
+}
+
+
+
+.footer {
+
+ grid-template-columns:1fr;
+
+}
+
 
 }
