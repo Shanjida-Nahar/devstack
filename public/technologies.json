@@ -144,11 +144,12 @@
   },
   {
     "id": 14,
-    "name": "AWS",
-    "category": "Cloud",
-    "categoryColor": "#FF9900",
-    "description": "A cloud computing platform providing infrastructure and application services.",
-    "icon": "icon": "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
+    "name": "Kubernetes",
+    "category": "DevOps",
+    "categoryColor": "#326CE5",
+    "description": "An open-source platform for automating deployment, scaling, and management of containerized applications.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    "rating": 4.8,
     "difficulty": "Advanced",
     "badge": "Popular"
   },
