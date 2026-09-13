@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import {
+  ToastContainer,
+  toast
+} from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import TechnologyArea from "./components/TechnologyArea";
 import Footer from "./components/Footer";
-
+import TechnologyArea from "./components/TechnologyArea";
 
 function App() {
-
 
   const [technologies, setTechnologies] = useState([]);
 
@@ -24,30 +25,41 @@ function App() {
   useEffect(() => {
 
     fetch("/technologies.json")
+
       .then(res => res.json())
+
       .then(data => {
 
         setTechnologies(data);
 
         setLoading(false);
 
-      });
+      })
 
+      .catch(() => {
+
+        toast.error(
+          "Failed to load technologies"
+        );
+
+        setLoading(false);
+
+      });
 
   }, []);
 
 
 
 
-  const addToStack = (technology)=>{
+  const addToStack = (technology) => {
 
 
-    const exists = stack.find(
+    const exists = stack.some(
       item => item.id === technology.id
     );
 
 
-    if(exists){
+    if (exists) {
 
       toast.warning(
         `${technology.name} already added`
@@ -58,9 +70,8 @@ function App() {
     }
 
 
-
-    setStack([
-      ...stack,
+    setStack(prev => [
+      ...prev,
       technology
     ]);
 
@@ -69,38 +80,40 @@ function App() {
       `${technology.name} added`
     );
 
-
   };
 
 
 
 
-  const removeFromStack = (id)=>{
+  const removeFromStack = (id) => {
 
 
     const removed = stack.find(
-      item=>item.id===id
+      item => item.id === id
     );
 
 
-    setStack(
-      stack.filter(
-        item=>item.id!==id
+    setStack(prev =>
+      prev.filter(
+        item => item.id !== id
       )
     );
 
 
-    toast.info(
-      `${removed.name} removed`
-    );
+    if (removed) {
 
+      toast.info(
+        `${removed.name} removed`
+      );
+
+    }
 
   };
 
 
 
 
-  const removeAll = ()=>{
+  const removeAll = () => {
 
     setStack([]);
 
@@ -112,23 +125,36 @@ function App() {
 
 
 
-
-
   return (
 
     <>
 
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnHover
+      />
+
+
       <Navbar />
+
 
       <Hero />
 
 
+
       {
-        loading ?
+        loading
+
+        ?
 
         <h2 className="loading">
           Loading technologies...
         </h2>
+
 
         :
 
@@ -149,11 +175,8 @@ function App() {
       }
 
 
-
       <Footer />
 
-
-      <ToastContainer />
 
     </>
 

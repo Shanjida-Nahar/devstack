@@ -1,51 +1,54 @@
-import TechnologyCard from "./TechnologyCard";
+import TechnologyArea from "./TechnologyArea";
 
 
 const TechnologySection = ({
   technologies,
   stack,
-  addToStack
+  addToStack,
+  removeFromStack,
+  removeAll
 }) => {
 
 
-return (
+  return (
 
-<div>
-
-<h2 className="section-title">
-Explore Technologies
-</h2>
+    <section className="technology-section">
 
 
-<div className="technology-grid">
+      <h2 className="section-title">
+
+        Explore the <span>Technologies</span>
+
+      </h2>
 
 
-{
-technologies.map(technology=>(
 
-<TechnologyCard
+      <p className="technology-subtitle">
 
-key={technology.id}
+        Pick one technology per category to build your ideal stack
 
-technology={technology}
-
-stack={stack}
-
-addToStack={addToStack}
-
-/>
-
-))
-}
+      </p>
 
 
-</div>
+
+      <TechnologyArea
+
+        technologies={technologies}
+
+        stack={stack}
+
+        addToStack={addToStack}
+
+        removeFromStack={removeFromStack}
+
+        removeAll={removeAll}
+
+      />
 
 
-</div>
+    </section>
 
-);
-
+  );
 
 };
 

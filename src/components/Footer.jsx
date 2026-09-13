@@ -1,70 +1,199 @@
-const Footer = ()=>{
+function Footer() {
 
 
-return (
-
-<footer className="footer">
+    return (
 
 
-<div>
-
-<h2>
-Dev Stack
-</h2>
-
-<p>
-Build your personalized developer technology stack.
-</p>
-
-</div>
+        <footer>
 
 
 
-<div>
+            <div className="footer-brand">
 
-<h4>
-Product
-</h4>
+                <img
+                    src="/assets/logo-text.png"
+                    alt="DevStack"
+                />
 
-<p>Technologies</p>
-<p>Projects</p>
-
-</div>
-
-
-
-<div>
-
-<h4>
-Company
-</h4>
-
-<p>About</p>
-<p>Contact</p>
-
-</div>
+                <p>
+                    Curated tools, technologies, and resources for developers <br></br>building modern software.
+                </p>
 
 
+                <div className="social-links">
 
-<div>
+                    <a href="#">
+                        GitHub
+                    </a>
 
-<h4>
-Legal
-</h4>
+                    <a href="#">
+                        Twitter
+                    </a>
 
-<p>Privacy</p>
-<p>Terms</p>
+                    <a href="#">
+                        LinkedIn
+                    </a>
 
-</div>
+                </div>
+
+
+            </div>
 
 
 
-</footer>
 
-);
+            <div>
 
 
-};
+                <h4>
+
+                    Product
+
+                </h4>
+
+
+
+                <p>
+
+                    Technologies
+
+                </p>
+
+
+                <p>
+
+                    Features
+
+                </p>
+
+
+                <p>
+
+                    Pricing
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div>
+
+
+                <h4>
+
+                    Resources
+
+                </h4>
+
+
+
+                <p>
+
+                    Documentation
+
+                </p>
+
+
+                <p>
+
+                    Blog
+
+                </p>
+
+
+                <p>
+
+                    Community
+
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div>
+
+
+                <h4>
+
+                    Follow Us
+
+                </h4>
+
+
+
+                <p>
+
+                    <a href="https://github.com">
+
+                        GitHub
+
+                    </a>
+
+                </p>
+
+
+
+                <p>
+
+                    <a href="https://twitter.com">
+
+                        Twitter
+
+                    </a>
+
+                </p>
+
+
+
+                <p>
+
+                    <a href="https://linkedin.com">
+
+                        LinkedIn
+
+                    </a>
+
+                </p>
+
+
+            </div>
+            <div className="footer-bottom">
+
+            <p>
+            © 2026 DevStack. All rights reserved.
+            </p>
+
+
+            <div className="footer-policy">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+
+            <a href="#">
+                Terms of Service
+            </a>
+
+            </div>
+
+            </div>
+
+        </footer>
+
+
+    );
+
+
+}
 
 
 export default Footer;

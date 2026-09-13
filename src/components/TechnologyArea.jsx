@@ -1,49 +1,110 @@
-import TechnologySection from "./TechnologySection";
+import TechnologyCard from "./TechnologyCard";
 import StackSidebar from "./StackSidebar";
 
 
-const TechnologyArea = ({
-  technologies,
-  stack,
-  addToStack,
-  removeFromStack,
-  removeAll
-}) => {
+function TechnologyArea({
+
+    technologies,
+
+    stack,
+
+    addToStack,
+
+    removeFromStack,
+
+    removeAll
+
+}) {
 
 
-return (
+    return (
 
-<section className="technology-area">
-
-
-<TechnologySection
-
-technologies={technologies}
-
-stack={stack}
-
-addToStack={addToStack}
-
-/>
+        <section className="technology-section">
 
 
-<StackSidebar
+            <h2 className="section-title">
 
-stack={stack}
+                Explore The
 
-removeFromStack={removeFromStack}
+                <span>
+                    Technologies
+                </span>
 
-removeAll={removeAll}
-
-/>
-
-
-</section>
-
-);
+            </h2>
 
 
-};
+
+            <p className="technology-subtitle">
+
+                Discover the tools and technologies
+                powering modern development.
+
+            </p>
+
+
+
+
+            <div className="technology-area">
+
+
+
+                <div className="technology-grid">
+
+
+                    {
+                        technologies.map(
+                            technology => (
+
+
+                                <TechnologyCard
+
+                                    key={technology.id}
+
+                                    technology={technology}
+
+                                    stack={stack}
+
+                                    addToStack={addToStack}
+
+
+                                />
+
+
+                            )
+
+                        )
+
+                    }
+
+
+                </div>
+
+
+
+
+                <StackSidebar
+
+
+                    stack={stack}
+
+                    removeFromStack={removeFromStack}
+
+                    removeAll={removeAll}
+
+
+                />
+
+
+            </div>
+
+
+        </section>
+
+
+    );
+
+
+}
 
 
 export default TechnologyArea;

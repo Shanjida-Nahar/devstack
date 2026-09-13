@@ -1,40 +1,89 @@
-const Hero = () => {
+function Hero() {
+
   return (
+
     <section className="hero">
+
 
       <div className="hero-content">
 
+
         <h1>
-          Build Your
-          <span> Developer Stack</span>
+
+          Build Your Ideal
+
+          <br></br>
+
+          <span>
+            Developer Stack
+          </span>
+
         </h1>
 
+
+
         <p>
-          Discover modern technologies and create your personalized
-          development stack with the tools you need.
+
+          Explore the latest technologies, tools,
+          and frameworks developers use to build
+          modern applications.
+
         </p>
 
+
+
         <div className="hero-buttons">
-          <button className="primary-btn">
+
+
+          <button
+            type="button"
+            className="primary"
+          >
+
             Explore Technologies
+
           </button>
 
-          <button className="secondary-btn">
+
+
+          <button
+            type="button"
+            className="secondary"
+          >
+
             Learn More
+
           </button>
+
+
         </div>
 
+
       </div>
+
+
 
 
       <div className="hero-image">
-        <div className="code-card">
-          &lt;/&gt;
-        </div>
+
+
+        <img
+
+          src="/assets/banner-stack.png"
+
+          alt="Developer technology stack"
+
+        />
+
+
       </div>
 
+
     </section>
+
   );
-};
+
+}
+
 
 export default Hero;

@@ -1,87 +1,168 @@
-const TechnologyCard = ({
-  technology,
-  stack,
-  addToStack
-}) => {
+function TechnologyCard({
+
+    technology,
+
+    stack,
+
+    addToStack
 
 
-const isAdded = stack.some(
-(item)=>item.id===technology.id
-);
-
-
-
-return (
-
-<div className="tech-card">
-
-
-<img
-src={technology.icon}
-alt={technology.name}
-/>
-
-
-<span className="badge">
-{technology.badge}
-</span>
-
-
-<h3>
-{technology.name}
-</h3>
-
-
-<p>
-{technology.description}
-</p>
-
-
-<div className="info">
-
-<span>
-{technology.category}
-</span>
-
-
-<span>
-{technology.difficulty}
-</span>
-
-</div>
+}) {
 
 
 
-<div className="rating">
-⭐ {technology.rating}
-</div>
+    const alreadyAdded = stack.some(
+
+        item => item.id === technology.id
+
+    );
 
 
 
-<button
 
-disabled={isAdded}
+    return (
 
-onClick={()=>addToStack(technology)}
+        <div
 
->
+            className={`tech-card ${
+                alreadyAdded ? "selected-card" : ""
+            }`}
 
-{
-isAdded
-?
-"✓ Added to Stack"
-:
-"Add to Stack"
+        >
+
+
+
+
+            <div className="card-top">
+
+
+                <img
+
+                    className="tech-icon"
+
+                    src={technology.icon}
+
+                    alt={technology.name}
+
+                />
+
+
+
+                <span
+                className="badge"
+                style={{
+                  backgroundColor: technology.categoryColor + "20",
+                  color: technology.categoryColor
+                }}
+                >
+                {technology.category}
+                </span>
+
+
+            </div>
+
+
+
+
+
+            <h3>
+
+                {technology.name}
+
+            </h3>
+
+
+
+
+            <p className="description">
+
+                {technology.description}
+
+            </p>
+
+
+
+
+
+            <div className="card-info">
+
+
+              <span className="category">
+
+                  {technology.category}
+
+              </span>
+
+
+
+              <span>
+
+                  {technology.difficulty}
+
+              </span>
+
+
+
+              <span className="rating">
+
+                  ⭐ {technology.rating}
+
+              </span>
+
+
+            </div>
+
+
+
+
+
+            <button
+
+                className={`stack-button ${
+                    alreadyAdded
+                    ? "added"
+                    : ""
+                }`}
+
+
+                disabled={alreadyAdded}
+
+
+                onClick={() =>
+
+                    addToStack(technology)
+
+                }
+
+
+            >
+
+                {
+
+                    alreadyAdded
+
+                    ?
+
+                    "Added"
+
+                    :
+
+                    "Add to Stack"
+
+                }
+
+
+            </button>
+
+
+
+        </div>
+
+
+    );
+
+
 }
-
-</button>
-
-
-</div>
-
-);
-
-};
 
 
 export default TechnologyCard;

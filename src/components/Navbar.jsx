@@ -1,25 +1,81 @@
-const Navbar = () => {
+function Navbar() {
+
   return (
+
     <nav className="navbar">
-      <div className="brand">
-        <div className="brand-logo">DS</div>
-        <span>Dev Stack</span>
+
+
+      <button
+        className="mobile-menu"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+
+
+      <div className="logo">
+
+        <img
+          src="/assets/logo-text.png"
+          alt="DevStack"
+        />
+
       </div>
+
+
 
       <div className="nav-links">
-        <a href="#">Home</a>
-        <a href="#technologies">Technologies</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+
+        <a
+          href="#"
+          className="active"
+        >
+          Home
+        </a>
+
+
+        <a href="#">
+          Features
+        </a>
+
+
+        <a href="#">
+          Technologies
+        </a>
+
+
       </div>
 
+
+
       <div className="nav-buttons">
-        <button className="signin-btn">Sign In</button>
-        <button className="signup-btn">Sign Up</button>
+
+        <button
+          className="signin"
+          type="button"
+        >
+          Sign In
+        </button>
+
+
+        <button
+          className="signup"
+          type="button"
+        >
+          Sign Up
+        </button>
+
+
       </div>
+
+
     </nav>
+
   );
-};
+
+}
+
 
 export default Navbar;

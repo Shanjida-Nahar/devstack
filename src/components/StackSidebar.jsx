@@ -1,98 +1,154 @@
-const StackSidebar = ({
-stack,
-removeFromStack,
-removeAll
-})=>{
+function StackSidebar({
+
+    stack,
+
+    removeFromStack,
+
+    removeAll
+
+}) {
 
 
-return (
+    return (
 
-<aside className="stack-sidebar">
-
-
-<h2>
-Your Stack ({stack.length})
-</h2>
+        <aside className="stack-sidebar">
 
 
-
-{
-stack.length===0
-
-?
-
-<p>
-No technology selected
-</p>
+            <h2>
+                Your Stack
+            </h2>
 
 
-:
 
-stack.map(item=>(
+            <p className="stack-count">
 
-<div className="stack-item" key={item.id}>
+                {stack.length}
 
+                {" "}
 
-<img
-src={item.icon}
-alt={item.name}
-/>
+                technologies
 
-
-<div>
-
-<h4>
-{item.name}
-</h4>
+            </p>
 
 
-<p>
-{item.category}
-</p>
 
 
-</div>
+            {
+
+                stack.length === 0
+
+                ?
 
 
-<button
-onClick={()=>removeFromStack(item.id)}
->
-✕
-</button>
+                <div className="empty-stack">
+
+                    Your stack is empty
+
+                </div>
 
 
-</div>
+                :
 
 
-))
+                <>
+
+
+                    <div className="stack-items">
+
+
+                        {
+
+                            stack.map(item => (
+
+
+                                <div
+
+                                    className="stack-item"
+
+                                    key={item.id}
+
+                                >
+
+
+
+                                    <img
+
+                                        src={item.icon}
+
+                                        alt={item.name}
+
+                                    />
+
+
+
+                                    <span>
+
+                                        {item.name}
+
+                                    </span>
+
+
+
+
+                                    <button
+
+                                        type="button"
+
+                                        onClick={() =>
+                                            removeFromStack(item.id)
+                                        }
+
+                                    >
+
+                                        ×
+
+                                    </button>
+
+
+
+                                </div>
+
+
+                            ))
+
+                        }
+
+
+                    </div>
+
+
+
+
+                    <button
+
+                        className="remove-all"
+
+                        type="button"
+
+                        onClick={removeAll}
+
+                    >
+
+                        Remove All
+
+                    </button>
+
+
+
+                </>
+
+
+            }
+
+
+
+        </aside>
+
+
+    );
 
 
 }
-
-
-
-{
-stack.length>0 &&
-
-<button
-className="remove-all-btn"
-onClick={removeAll}
->
-
-Remove All
-
-</button>
-
-}
-
-
-
-</aside>
-
-);
-
-
-};
 
 
 export default StackSidebar;
