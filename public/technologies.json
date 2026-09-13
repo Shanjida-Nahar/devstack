@@ -148,7 +148,7 @@
     "category": "Cloud",
     "categoryColor": "#FF9900",
     "description": "A cloud computing platform providing infrastructure and application services.",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    "icon": "https://cdn.simpleicons.org/amazonaws/FF9900",
     "rating": 4.7,
     "difficulty": "Advanced",
     "badge": "Popular"
