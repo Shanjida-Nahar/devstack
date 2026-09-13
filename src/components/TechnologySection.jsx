@@ -1,7 +1,12 @@
 import technologies from "../data/technologies.json";
 import TechnologyCard from "./TechnologyCard";
 
-const TechnologySection = () => {
+
+const TechnologySection = ({
+  addToStack,
+  stack
+}) => {
+
 
   return (
     <section id="technologies">
@@ -10,21 +15,40 @@ const TechnologySection = () => {
         Explore Technologies
       </h2>
 
-      <div className="technology-grid">
 
-        {
-          technologies.map((technology) => (
-            <TechnologyCard
-              key={technology.id}
-              technology={technology}
-            />
-          ))
-        }
+      <div className="technology-layout">
+
+
+        <div className="technology-grid">
+
+          {
+            technologies.map((technology) => (
+
+              <TechnologyCard
+
+                key={technology.id}
+
+                technology={technology}
+
+                addToStack={addToStack}
+
+                stack={stack}
+
+              />
+
+            ))
+          }
+
+
+        </div>
+
 
       </div>
+
 
     </section>
   );
 };
+
 
 export default TechnologySection;

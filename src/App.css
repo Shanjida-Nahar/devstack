@@ -136,3 +136,43 @@
   justify-content:space-between;
   margin:15px 0;
 }
+
+.technology-layout {
+  display:flex;
+  gap:30px;
+}
+
+
+.stack-sidebar {
+
+  width:300px;
+  padding:25px;
+  border-radius:20px;
+  background:#fafafa;
+
+}
+
+
+.stack-item {
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
+
+}
+
+
+.stack-item img {
+
+  width:40px;
+  height:40px;
+
+}
+
+
+.stack-item button {
+
+  margin-left:auto;
+
+}
