@@ -336,13 +336,13 @@ html {
 
 .technology-area {
 
- display:grid;
+    display:grid;
 
- grid-template-columns:minmax(0,1fr) 240px;
+    grid-template-columns:minmax(0,1fr) 240px;
 
- gap:22px;
+    gap:22px;
 
- align-items:start;
+    align-items:start;
 
 }
 
@@ -737,7 +737,23 @@ footer p {
 
 .stack-sidebar {
 
- width:100%;
+    width:240px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    border:1px solid #edf2f7;
+
+    position:sticky;
+
+    top:80px;
+
+    align-self:start;
+
+    height:max-content;
 
 }
 
