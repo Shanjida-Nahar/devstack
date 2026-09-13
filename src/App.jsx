@@ -1,8 +1,12 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <main>
-      <h1>Dev Stack</h1>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
 

@@ -1,3 +1,99 @@
-#root {
-  min-height: 100vh;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(90deg, orange, hotpink, violet);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+}
+
+.signup-btn,
+.primary-btn {
+  color: white;
+  background: linear-gradient(90deg, orange, hotpink, violet);
+}
+
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 8%;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, orange, hotpink, violet);
+  color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 25px 0;
+  font-size: 18px;
+}
+
+.hero-buttons button {
+  padding: 14px 25px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.secondary-btn {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.code-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  background: #111;
+  color: white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:80px;
 }
