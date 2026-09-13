@@ -1,8 +1,8 @@
-import technologies from "../data/technologies.json";
 import TechnologyCard from "./TechnologyCard";
 
 
 const TechnologySection = ({
+  technologies,
   addToStack,
   stack
 }) => {

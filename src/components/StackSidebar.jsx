@@ -1,5 +1,8 @@
-const StackSidebar = ({ stack, removeFromStack }) => {
-
+const StackSidebar = ({
+  stack,
+  removeFromStack,
+  removeAll
+}) => {
   return (
     <aside className="stack-sidebar">
 
@@ -60,7 +63,16 @@ const StackSidebar = ({ stack, removeFromStack }) => {
         )
       }
 
-
+    {
+    stack.length > 0 && (
+    <button
+        className="remove-all-btn"
+        onClick={removeAll}
+    >
+        Remove All
+    </button>
+    )
+    }
     </aside>
   );
 };

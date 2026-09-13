@@ -176,3 +176,20 @@
   margin-left:auto;
 
 }
+
+.loading {
+  text-align:center;
+  margin:50px;
+}
+
+
+.remove-all-btn {
+
+  margin-top:20px;
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+
+}
